@@ -1,0 +1,11 @@
+andreymaslov@MacBook-Air-Andrey  ~/MyOTUS/Andrey039_microservices docker-2  docker images | grep andrey
+andreymaslov/ubuntu-tmp-file   latest              28fe386e0ddb        22 seconds ago      127MB
+
+Из выводов комманд
+>docker inspect <u_container_id> 
+>docker inspect <u_image_id>
+сразу бросается в глаза что в варианте u_container_id присутствуют конфигурация сети  "NetworkSettings" 
+и точки монтирования "Mounts", в варианте с u_image_id они отсутсвуют.
+
+docker-machine create --driver google --google-machine-image https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/family/ubuntu-1604-lts --google-machine-type n1-standard-1 --google-zone europe-west1-b docker-host
+
