@@ -1,0 +1,9 @@
+andreymaslov@MacBook-Air-Andrey  ~/MyOTUS/Andrey039_microservices docker-2  docker images | grep andrey
+andreymaslov/ubuntu-tmp-file   latest              28fe386e0ddb        22 seconds ago      127MB
+
+Из выводов комманд
+>docker inspect <u_container_id> 
+>docker inspect <u_image_id>
+сразу бросается в глаза что в варианте u_container_id присутствуют конфигурации  
+"NetworkSettings", "Mounts", "State", "Image" в варианте с u_image_id они отсутсвуют.
+Контейнер это запущенное окружение на базе образа с верхним слоем RW.
