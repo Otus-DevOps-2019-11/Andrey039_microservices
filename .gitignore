@@ -16,5 +16,6 @@ vault.key
 .pytest_cache
 .venv/
 venv/
+.env
 
 
