@@ -243,7 +243,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(ui_request_count{job="ui"}[1m])",
+          "expr": "rate(ui_request_count{job=\"ui\"}[1m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "",
