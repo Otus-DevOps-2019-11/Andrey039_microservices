@@ -17,11 +17,6 @@ services:
     networks:
       - reddit_frontend
       - reddit_backend
-    logging:
-      driver: "fluentd" 
-      options:
-        fluentd-address: localhost:24224 
-        tag: service.post
   comment:
     image: ${USERNAME}/comment:${COMMENT_VERSION}
     networks:
