@@ -10,6 +10,8 @@ services:
     image: ${USERNAME}/ui:${UI_VERSION}
     ports:
       - ${UI_PORT}:9292/tcp
+    environment: 
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       - reddit_frontend
     logging:
@@ -22,6 +24,8 @@ services:
     networks:
       - reddit_frontend
       - reddit_backend
+    environment: 
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     logging:
       driver: "fluentd" 
       options:
@@ -32,6 +36,8 @@ services:
     networks:
       - reddit_frontend
       - reddit_backend
+    environment: 
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
 volumes:
   post_db:
 networks:
