@@ -20,7 +20,11 @@ spec:
         component: ui
     spec:
       containers:
-      - image: maslovkng/ui
+      - image: maslovkng/ui:k2
         name: ui
-    
+        env:
+          - name: ENV
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
     

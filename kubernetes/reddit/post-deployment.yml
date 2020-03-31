@@ -20,7 +20,7 @@ spec:
         component: post
     spec:
       containers:
-      - image: chromko/post
+      - image: maslovkng/post:k2
         name: post
         env:
         - name: POST_DATABASE_HOST
