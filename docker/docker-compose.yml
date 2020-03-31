@@ -10,18 +10,34 @@ services:
     image: ${USERNAME}/ui:${UI_VERSION}
     ports:
       - ${UI_PORT}:9292/tcp
+    environment: 
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       - reddit_frontend
+    logging:
+      driver: "fluentd" 
+      options:
+        fluentd-address: localhost:24224 
+        tag: service.ui
   post:
     image: ${USERNAME}/post:${POST_VERSION}
     networks:
       - reddit_frontend
       - reddit_backend
+    environment: 
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
+    logging:
+      driver: "fluentd" 
+      options:
+        fluentd-address: localhost:24224 
+        tag: service.post
   comment:
     image: ${USERNAME}/comment:${COMMENT_VERSION}
     networks:
       - reddit_frontend
       - reddit_backend
+    environment: 
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
 volumes:
   post_db:
 networks:
