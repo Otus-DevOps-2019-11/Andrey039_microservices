@@ -1,8 +1,10 @@
 # Andrey039_microservices
 Andrey039 microservices repository
 
-http://35.189.238.112:32093/
++ * Опишите создаваемый объект Secret в виде Kubernetesманифеста.
 
+gcloud beta container clusters update reddit --zone=europe-west1-b --update-addons=NetworkPolicy=ENABLED
 
-Звпуск контенера для дебага kubectl run --namespace=default debug --rm -ti --image busybox /bin/sh
--it
+gcloud beta container clusters update reddit --zone=europe-west1-b --enable-network-policy
+
+ gcloud compute disks create --size=25GB --zone=europe-west1-b reddit-mongo-disk
