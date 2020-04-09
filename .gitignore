@@ -17,6 +17,4 @@ vault.key
 .venv/
 venv/
 .env
-
-
-#.DS_Store
+.DS_Store
