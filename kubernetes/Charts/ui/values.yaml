@@ -1,0 +1,16 @@
+---
+service:
+  internalPort: 9292
+  externalPort: 9292
+
+image:
+  repository: maslovkng/ui
+  tag: k2
+
+  ingress:
+    class: nginx
+  
+  postHost:
+  postPort:
+  commentHost:
+  commentPort:

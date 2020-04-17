@@ -1,0 +1,21 @@
+ui:
+    image:
+      repository: maslovkng/ui
+      tag: k2
+    service:
+      externalPort: 9292
+
+comment:
+    image:
+      repository: maslovkng/comment
+      tag: k2
+    service:
+      externalPort: 9292
+  
+post:
+    image:
+      repository: maslovkng/post
+      tag: k2
+    service:
+      externalPort: 5000
+  
